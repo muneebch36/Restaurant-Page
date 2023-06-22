@@ -1,7 +1,12 @@
+
+
 function makeMenu() {
     const menu = document.createElement("div");
     menu.classList.add("menu");
 
+    menu.appendChild(createMenuItem("vanilla bean","the mean bean is seen"));
+    menu.appendChild(createMenuItem("vanilla bean","the mean bean is seen"));
+    menu.appendChild(createMenuItem("vanilla bean","the mean bean is seen"));
     menu.appendChild(createMenuItem("vanilla bean","the mean bean is seen"));
 
 return menu;
@@ -29,7 +34,9 @@ function createMenuItem(name,description) {
 }
 
 function menuTab() {
-    content.appendChild(makeMenu());
+    const center = document.querySelector(".center");
+    center.textContent = "";
+    center.appendChild(makeMenu());
 }
 
 export default menuTab;

@@ -1,3 +1,5 @@
+
+
 function makeHome() {
     const home = document.createElement("div");
     home.classList.add("home");
@@ -6,23 +8,24 @@ function makeHome() {
     homeImage.src = "../src/nut.png";
     homeImage.alt = "nut";
 
-    const homeParagraph = document.createElement("p");
-    const homeParagraph2 = document.createElement("p");
-    const homeSentence = ["Line 1", "Line 2", "Line 3"];
-
-    homeParagraph.textContent = homeSentence[0];
-    home.appendChild(homeParagraph);
+    home.appendChild(makeHomeParagraph("Line 1"));
     home.appendChild(homeImage);
-    homeParagraph2.textContent = homeSentence[1];
-    home.appendChild(homeParagraph2);
-    homeParagraph.textContent = homeSentence[2];
-    home.appendChild(homeParagraph);
+    home.appendChild(makeHomeParagraph("Line 2"));
+    home.appendChild(makeHomeParagraph("Line 3"));
 
 return home;
 };
 
+function makeHomeParagraph(sentence) {
+    const homeParagraph = document.createElement("p");
+    homeParagraph.textContent = sentence
+    return homeParagraph;
+}
+
 function homeTab() {
-    content.appendChild(makeHome());
+    const center = document.querySelector(".center");
+    center.textContent = "";
+    center.appendChild(makeHome());
 }
 
 export default homeTab;

@@ -1,3 +1,5 @@
+
+
 function makeContact() {
     const contact = document.createElement("div");
     contact.classList.add("contact");
@@ -20,7 +22,9 @@ return contact;
 }
 
 function contactTab() {
-    content.appendChild(makeContact());
+    const center = document.querySelector(".center");
+    center.textContent = "";
+    center.appendChild(makeContact());
 }
 
 export default contactTab;
