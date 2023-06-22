@@ -16,29 +16,14 @@ function makeHeader() {
 return header;
 };
 
-function makeFooter() {
-    const footer = document.createElement("div");
-    footer.classList.add("footer");
-
-    const title = document.createElement("h1");
-    title.classList.add("title");
-    title.textContent = "Bottom Text";
-
-    footer.appendChild(title);
-
-return footer;
-};
-
 function makeNav() {
     const navBar = document.createElement("nav");
-
 
     const homeButton = document.createElement("button");
     homeButton.classList.add("home-button");
     homeButton.textContent = "HOME";
     homeButton.addEventListener("click", (e) => {
         if (e.target.classList.contains("active")) return;
-        /* setActiveButton(homeButton); */
         homeTab();
       });
 
@@ -47,7 +32,6 @@ function makeNav() {
       contactButton.textContent = "CONTACT";
       contactButton.addEventListener("click", (e) => {
           if (e.target.classList.contains("active")) return;
-          /* setActiveButton(contactButton); */
           contactTab();
         });
 
@@ -56,7 +40,6 @@ function makeNav() {
       menuButton.textContent = "MENU";
       menuButton.addEventListener("click", (e) => {
           if (e.target.classList.contains("active")) return;
-          /* setActiveButton(menuButton); */
           menuTab();
         });
 
@@ -78,8 +61,6 @@ function newTab() {
     content.textContent = "";
     content.appendChild(makeHeader());
     content.appendChild(makeCenter());
-/*     content.appendChild(makeFooter()); */
-
     homeTab();
 
 return content;
