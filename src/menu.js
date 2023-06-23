@@ -4,7 +4,7 @@ function makeMenu() {
     const menu = document.createElement("div");
     menu.classList.add("menu");
 
-    menu.appendChild(createMenuItem("vanilla bean","the mean bean is seen"));
+    menu.appendChild(createMenuItem("wafting spirit","cheap but filling."));
     menu.appendChild(createMenuItem("vanilla bean","the mean bean is seen"));
     menu.appendChild(createMenuItem("vanilla bean","the mean bean is seen"));
     menu.appendChild(createMenuItem("vanilla bean","the mean bean is seen"));

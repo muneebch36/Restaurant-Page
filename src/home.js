@@ -8,10 +8,9 @@ function makeHome() {
     homeImage.src = "../src/nut.png";
     homeImage.alt = "nut";
 
-    home.appendChild(makeHomeParagraph("Line 1"));
+    home.appendChild(makeHomeParagraph("Best Spirits since the dawn of life."));
     home.appendChild(homeImage);
-    home.appendChild(makeHomeParagraph("Line 2"));
-    home.appendChild(makeHomeParagraph("Line 3"));
+    home.appendChild(makeHomeParagraph("Summoning orders available 3-4AM."));
 
 return home;
 };
